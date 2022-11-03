@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator Program</title>
     <link rel="stylesheet" href="style.css"> <!-- CSS -->
-    <script src="index.js" type="text/javascript"></script> <!-- Javascript -->
-  
+    
     <!-- Kanit Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <!-- DM Sans Font-->
@@ -18,34 +17,43 @@
       <h1>Simple Calculator Program</h1>
 
       <section>
+        <!-- Input the First Number --> 
+        <div class="input-container">
+          <label for="firstNumber">First Number <br>
+            <input type="text" id="firstNumber" />
+          </label>
+          <span class="error" id="spanError1"></span>
+        </div><br>
         <!-- Input the First Number -->
-        <label for="firstNumber">First Number <br>
-          <input type="text" id="firstNumber" />
-        </label><br>
-        <!-- Input the First Number -->
-        <label for="secondNumber">Second Number <br>
-          <input type="text" id="secondNumber" />
-        </label><br>
-
+        <div class="input-container">
+          <label for="secondNumber">Second Number <br>
+            <input type="text" id="secondNumber" />
+          </label>
+          <span class="error" id="spanError2"></span>
+        </div><br>
         <!-- Select the operator -->
-        <select id="selectOperator">
-          <option selected>Choose the operator!</option>
-          <option id="+">+</option>
-          <option id="-">-</option>
-          <option id="*">*</option>
-          <option id="/">/</option>
-          <option id="%">%</option>
-          <option id="^2">^2</option>
-          <option id="^3">^3</option>
-        </select>
-
+        <div class="select-container">
+          <select id="selectOperator">
+            <option selected>Choose the operator!</option>
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+            <option>%</option>
+            <option>^2</option>
+          </select>
+          <span class="selectError" id="selectError"></span>
+        </div>
+        <br>
+        <!-- Submit Button-->
+        <button type="submit" id="submit">Submit</button>
         <!-- Output the result -->
         <div class="result" id="myResult">
           <!-- Here is the result-->
-          Result
         </div>
       </section>
     </div>
-
+    
+    <script src="index.js" type="text/javascript"></script> <!-- Javascript -->
   </body>
 </html>

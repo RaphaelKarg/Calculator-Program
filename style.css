@@ -137,18 +137,25 @@ body {
 }
 
 section {
-  width: 300px;
+  width: 250px;
   margin: 0 auto;
   overflow: hidden;
 }
 
+section .input-container{
+  display: flex;
+  position: relative;
+}
+
 section label {
   color: white;
+
   font-family: arial;
   font-size: 18px;
   width: 100%;
   margin-top: 10px;
   float: left;
+  overflow: hidden;
 }
 
 label input {
@@ -169,8 +176,22 @@ label input:focus {
   border-bottom: 3px solid rgb(255, 55, 55);
 }
 
-section select {
+.input-container .error {
   margin-top: 10px;
+  position: absolute;
+  bottom: 9px;
+  right: 12px;
+  font-size: 19px;
+  font-weight: bold;
+}
+.select-container{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+section select {
   padding: 10px;
   outline: none;
   border: none;
@@ -179,6 +200,7 @@ section select {
   background-color: rgb(69, 69, 69);
   color: white;
   border-radius: .25em;
+  cursor: pointer;
 }
 
 select option {
@@ -189,10 +211,31 @@ select option {
   outline: none;
 }
 
+.selectError {
+  margin: 0px 5px 0px 5px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+section button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 15px 10px 15px;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  transition: all 0.7s;
+}
+button:hover {
+  background-color: rgb(79, 79, 79);
+  color: white;
+  cursor: pointer;
+}
 section .result {
   width: 100%;
-  margin-top: 10px;
   font-size: 20px;
   color: white;
-
 }
